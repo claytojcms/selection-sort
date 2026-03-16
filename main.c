@@ -27,8 +27,9 @@ for(int i=0; i<n-1;i++){
 for(int j=i ;j<n ;j++){
     if(ordem==1 && v[j] < v[idx]){
     comparacoes++;
-    idx =j;
-    }
+    idx=j;
+        }
+
     if(ordem== -1 && v[j]> v[idx]){
         comparacoes++;
         idx= j;
@@ -41,9 +42,6 @@ for(int j=i ;j<n ;j++){
 }      printf("\ntrocas: %d comparacoes:%d\n",trocas,comparacoes);
 }
 
-
-
-
 int main(void) {
     // Casos pedidos
     int v_vazio[]      = {};                 // n = 0 (não use sizeof aqui)
@@ -53,7 +51,7 @@ int main(void) {
     int v_repetidos[]  = {3, 1, 3, 2, 3};
     int n = 5;
     int ordem;
-    printf("selecione a ordem\n1-crescente\n-1-decrescente");
+    printf("selecione a ordem\n1-crescente\n-1-decrescente\n");
     scanf("%d",&ordem);
     selectionSort(v_repetidos,n,ordem);
     print_array(v_repetidos,n);
